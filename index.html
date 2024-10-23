@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    
+    
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="heading ">
+            <h1>Password Generator</h1>
+        </div>
+
+        <div class="password-copy ">
+
+            <input type="text" id="password" readonly placeholder="Password..." class="password-display">
+            <button class="btn">
+                <p class="copy ">Copied</p>
+                <img src="copy.svg" alt="" class="image">
+            </button>
+
+        </div>
+        <div class="generate">
+            <div class="password-length">
+                <p class="Length">Password Length</p>
+                <p class="password">10</p>
+            </div>
+            <input type="range" min="1" max="20" step="1" id="slider">
+            <div class="checkboxes">
+                <div>
+                    <input type="checkbox" id="uppercase" class="check">
+                    <label for="uppercase">Include Uppercase</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lowercase"  class="check">
+                    <label for="lowercase">Include Lowercase</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="number"  class="check">
+                    <label for="number">Include Numbers</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="symbol" class="check" >
+                    <label for="symbols">Include Symbols</label>
+                </div>
+                
+            </div>
+            <div class="strength">
+                <p>Password Strength</p>
+                <div class="indicator"></div>
+            </div>
+            <div class="generate-btn">
+                <button class="generate-password" type="button">Generate Password</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
